@@ -1,0 +1,357 @@
+(no subject)
+Inbox
+
+Anujha Krishnamoorthy <2326jb05@kgcas.com>
+Attachments
+Thu, Jun 12, 3:24 PM (22 hours ago)
+to me
+
+
+ One attachment
+  •  Scanned by Gmail
+Day 6:
+main collection class    Duplicates    order    Sort   Thread saftey   null
+   LIST
+[Array list               yes           yes       no      no            "
+linkesd list             yes            yes        no      no           "
+vector  ]                 yes           yes       no      yes           "
+   SET
+[hashset                  no             no       no      no            1
+linkesdhashset           no             yes       no      no            1
+treeset  ]                no            yes      yes     no             no
+    MAP
+[hashmap                  no             no       no      no
+linkedhashmap            no             yes      no      no
+hash table               no             no       no      yes
+tree map]                 no            yes      yes      no
+
+priority                 yes                                             no
+array deque              yes          lifo or fifo                       no
+
+-------------------------------------------------------------------------------------------
+
+purpose  or usecase(thread saftey-sychorized )
+
+Array List:
+   *)use it when more search option or needed when inseration and removal to be supported.
+vector:
+   *)use it when u need sychornized it.
+linked list:
+   *)use it when inseration and removal are needed frequently.
+
+Set
+hashset: 
+   *)use it when you want only unique elements without any order.
+linkedhast
+    *)use it when you want only in insertion elements.
+treeset:
+    *)use it when you want only  unique element in specific order.
+hashmap
+   *) use it when you want only key value pairs without any order.
+linked has map:
+    *)use it key values pass in insertion order.
+treemap:
+    *)use it when you want key value sorted in some specific oreder.
+queue
+    *)use it when u want queue of element placed in some.
+array deque:
+   *)you can use itas a queue or a stack.
+
+------------------------------------------------------------------------------------------
+1)
+arraylist:
+package collections.List;
+import java.util.*;
+
+public class ArrayListClass {
+
+	public static void main(String[] args) {
+
+		int arr[]=new int[15];
+
+		ArrayList<Integer> alist = new ArrayList<>(100);
+
+		alist.add(10);
+
+		alist.add(20);
+
+		alist.add(30);
+
+		alist.add(2,40);
+
+		alist.set(3,50);
+
+		alist.remove(1);
+
+		System.out.println(alist.reversed());
+
+		System.out.println(alist.contains(100));
+
+		System.out.println(alist.size());
+
+		System.out.println(alist);
+
+	}
+
+
+
+}
+
+2) 
+package collections.List;
+
+import java.util.LinkedList;
+
+public class LinkedListClass {
+    public static void main(String[] args)
+    {
+    	int arr[]=new int[15];
+    	LinkedList<Integer> alist = new LinkedList<>();
+    	alist.add(10);
+
+		alist.add(20);
+
+		alist.add(30);
+		alist.add(null);
+		alist.set(2, 5);
+		
+		System.out.println(alist.reversed());
+
+		System.out.println(alist.contains(15));
+		System.out.println(alist.size());
+
+		System.out.println(alist);
+
+}
+}
+
+3)package collections.List;
+
+import java.util.LinkedList;
+import java.util.Vector;
+
+public class VectorListClass {
+	public static void main(String[] args) {
+		Vector<Integer> alist = new Vector<>();
+		
+		int arr[]=new int[15];
+    	LinkedList<Integer> alist1 = new LinkedList<>();
+    	alist1.add(15);
+
+		alist1.add(20);
+
+		alist1.add(40);
+		
+		System.out.println(alist1.reversed());
+
+		System.out.println(alist1.contains(15));
+		System.out.println(alist1.size());
+
+		System.out.println(alist1);
+
+	}
+-----------------------------------------------------------------------------------
+
+1)
+package collections.Queue;
+
+import java.util.ArrayDeque;
+import java.util.LinkedList;
+
+public class ArrayDequeClass {
+	
+	    public static void main(String[] args)
+	    {
+	    	ArrayDeque<Integer> alist2 = new ArrayDeque<>();
+            
+	    	int arr[]=new int[15];
+	    	
+	    	alist2.add(1);
+
+			alist2.add(20);
+
+			alist2.add(30);
+			alist2.add(10);
+			
+			System.out.println(alist2.reversed());
+
+			System.out.println(alist2.contains(12));
+			System.out.println(alist2.size());
+
+			System.out.println(alist2);
+
+	    }
+	}
+
+2)
+package collections.Queue;
+
+import java.util.PriorityQueue;
+
+public class PriorityQueueClass {
+	 public static void main(String[] args)
+	   
+		    {
+			 PriorityQueue<Integer> alist = new PriorityQueue <>();
+			    alist.add(20);
+			    alist.add(30);
+			    System.out.println(alist);
+			 
+
+		    }
+	    }
+
+
+----------------------------------------------------------------------------
+1)
+package collections.Set;
+
+import java.util.HashSet;
+
+public class HashSetClass {
+
+	public static void main(String[] args)
+    {
+		HashSet<Integer> alist = new HashSet<>();
+	
+
+		int arr[]=new int[15];
+    
+		alist.add(1);
+
+		alist.add(20);
+
+		alist.add(30);
+		
+		
+		System.out.println(alist);
+
+		
+    }
+}
+
+
+2)
+package collections.Set;
+
+import java.util.LinkedHashSet;
+
+public class LinkedHashSetClass
+{
+		    public static void main(String[] args) {
+		        LinkedHashSet<Integer> alist = new LinkedHashSet<>();
+		        int arr[] = new int[15];
+
+		        alist.add(1);
+		        alist.add(20);
+		        alist.add(30);
+
+		        System.out.println(alist.reversed());
+		    }
+		}
+
+		
+-------------------------------------------------------------------------------------------------------
+package modular;
+
+import java.util.Scanner;
+
+public class CustomerDetailsClass {
+      private String name;
+	  private long mobileno;
+	  private String address;
+	  private boolean gender;
+      private int cost;
+	
+      public void setName(String name) {
+    		 this.name = name;
+    	 }
+      public String  getName() {
+    		 return name;
+    	 }
+    	 
+             public void setMobile(long mobileno) {
+    	        this.mobileno = mobileno;
+              }
+             public long getMobile() {
+        	       return mobileno;
+       }
+      public void  setAddress (String address) {
+    	  this.address = address;
+    	  
+      }
+      public String getAddress() {
+          return address;
+      }
+                public void setGender(boolean gender) {
+        	         this.gender = gender;
+                   }
+           
+                 public boolean getGender() {
+                	 return gender;
+                 }
+       public void setCost(int cost) {
+    	     this.cost = cost;
+       }
+       public int getcost() {
+    	   return cost;
+       }
+	  
+
+}
+
+------
+package contoller;
+import Modular.CostomerDetails;
+import java.util.Scanner;
+public class Details {
+	public static void main  (String[]args)
+	{
+		 CustomerDetailsClass user = new CustomerDetailsClass() ;
+		 Scanner sc = new Scanner(System.in);
+		 System.out.println("enter your name");
+		 user.setName(sc.next());
+		 System.out.println("user.getName");
+		 
+		 System.out.println("enter your mobileno");
+		 user.setMobileno(sc.nextLong());
+		 System.out.println("user.getmobileno");
+		 
+		 System.out.println("enter your mobileno");
+		 user.setMobileno(sc.next());
+		 System.out.println("user.getmobileno");
+		 
+	}
+
+	
+---------------------------------------------------------------------------------------------
+Thread:
+   *)it its light weight procss execution to allow a single process to run on processor (code)
+Multi threading:
+   *) which will execute multiple.
+multi tasking:
+   *)using two application can use  at a time .
+--------------------------------------------------------------------------------
+to create a thread:
+  *)extends thread class(both same c to c).
+  *) runable interface implement (both are differ).
+--------------------------------------------------------------------------------
+methods in thread:
+   *)start
+   *)run(override)execute when st
+   *)sleep(parameterized )
+   *)join(deflault)
+   *)is alive
+   *)interurpt
+   *)set priority(parameter (p no)
+--------------------------------------------------------------------------
+stage:
+    *)new(create)
+    *)runable(ready to run but waiting for cpu time)
+    *)running(actively execute)
+    *)blocked or waiting
+    *)terminated(final stage incompled or completed)
+--------------------------------------------------------------------------
+
+
+
