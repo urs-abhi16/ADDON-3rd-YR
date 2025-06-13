@@ -1,0 +1,101 @@
+Exception Handling :
+ An Exception is an unwanted or unexpected event that occurs during the execution of a program;
+eg: 10/0;
+indexoutofbound
+Two types of error :
+* Run-time error 
+* Compile -time error
+
+*Checked exception - eg: IOException ,FileNotFoundException,ClassNotFoundException.
+
+*Unchecked exception-eg:ArrayIndexOutOfBoundsException,NullPointerException ,Arithmetic Exception,illegalArugumentException;
+
+*Errors-eg:SystmeOutOfMemoryError ,Sudden Shut down;
+----------------------------------------------------------------------------------------------------------
+Used to handle Exception
+1)try,catch,finally;
+2) Throw,throws;
+
+TRY block:
+The try block contains a set of statements where an exception can occur
+
+program:
+
+class TRYCLASS {
+    public static void main(String[] args) {
+        try {
+        	int a = 10/0;
+        }   
+        catch (ArithmeticException e) {
+            System.out.println("Exception caught: ");
+        }
+     
+       System.out.println("I will always execute");
+    }
+}
+output:
+Exception caught: 
+I will always execute
+------------------------------------------------------------------------------------------------------------
+Java Collections:
+Any group of individual objects that are represented as a single unit ;
+it is a framework which provides set of classes andc interface to store  and manipulate grps or objects..
+interface in collection :]
+*list-
+  	# Arraylist
+	#linkedList
+	#Vector
+*set-
+	#Hashset
+	#LinkedHashset
+*queue-
+	#priorityQueue
+	#ArrayQueue
+*map;
+---------------------------------------------------------------------------------------------------------
+ArrayList
+keywords:
+*add(int index, Object element)- used to add elements.
+*set() used to replace the elements
+*remove()- remove element
+*contains()- serach whether the value is present or not
+*clear ()-array will disappear
+*isEmpty()-Returns true if this list contains no elements.
+
+sample programs:
+import java.util.*;
+
+public class ArrayListClass {
+
+	public static void main(String[] args) {
+
+		int arr[]=new int[15];
+
+		ArrayList<Integer> alist = new ArrayList<>(100);
+
+		alist.add(10);
+
+		alist.add(20);
+
+		alist.add(30);
+
+		alist.add(2,40);
+
+		alist.set(3,50);
+
+		alist.remove(1);
+
+		System.out.println(alist.reversed());
+
+		System.out.println(alist.contains(100));
+
+		System.out.println(alist.size());
+
+		System.out.println(alist);
+
+	}
+
+
+
+}
+
