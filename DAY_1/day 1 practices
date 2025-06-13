@@ -1,0 +1,97 @@
+public class HelloWorld { 
+    public static void main(String[] args) { 
+        int age=16; 
+
+        if (age>16) { 
+            System.out.println("valid"); 
+        } 
+        else if(age==16){ 
+            System.out.println("age is 16"); 
+
+        } 
+        else{ 
+            System.out.println("invalid"); 
+        } 
+
+
+           } 
+} 
+
+
+next condition with else if with && : 
+public class HelloWorld { 
+    public static void main(String[] args) { 
+        int age=16; 
+        String gender="male"; 
+        if (age>=18 && gender=="female") { 
+            System.out.println("Eligible for female"); 
+        } 
+        else if(age>=23 && gender=="male"){ 
+            System.out.println("eligible for male"); 
+
+        } 
+        else{ 
+            System.out.println("kalyanam eh ella poda :)"); 
+        } 
+
+
+           } 
+} 
+---------------------------------------------------------------------------------------------------- 
+
+program using elseif as well as switch : 
+public class hi { 
+    public static void main(String[] args) { 
+        int age=44; 
+        String gender="male"; 
+        if (age<18 || gender=="female") { 
+            System.out.println("ticket is free"); 
+        } 
+
+        else{ 
+            int km=17; 
+            switch(km){ 
+                case 5:{ 
+                    System.out.println("50"); 
+                    break;} 
+                 case 10:{ 
+                    System.out.println("75"); 
+                    break;} 
+                default:{ 
+                    System.out.println("vandi odathu vroo :("); 
+                } 
+                } 
+        } 
+
+
+           } 
+} 
+
+---------------------------------------------------------------------------------------- 
+PROGRAMS WITH WHILE LOOP & DO WHILE LOOP  
+int i = 0; 
+do { 
+  System.out.println(i); 
+  i++; 
+} 
+while (i < 5); 
+int i = 0; 
+while (i < 5) { 
+  System.out.println(i); 
+  i++; 
+} 
+------------------------------------------------------------------------------------------- 
+METHODS : 
+public class Main { 
+ static  int myMethod(int x, int y) { 
+    return x + y; 
+  } 
+
+  public static void main(String[] args) { 
+    Main mi=new Main(); 
+     myMethod(5, 3); 
+    System.out.println( myMethod(5, 3)); 
+  } 
+} 
+
+output : 8
