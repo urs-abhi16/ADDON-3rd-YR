@@ -1,0 +1,133 @@
+DAY 4:
+----------
+Packages= combination of classes and objects;
+OOPS-Object Oriented Programming
+1) classes
+2)Object-An Object is a basic unit of Object-Oriented Programming that represents real-life entities
+* state
+* behaviour
+*identity
+also object is a instance of class
+----------------------------------------------------------------------------------
+Standard library- public final class implement
+---------------------------------------------------------------------------------------
+Pillars of Java OOPs Concepts
+ 3) Abstraction- we can use it as abstract keyword or interface(helps in hiding the data
+4) Encapsulation
+5)Polymorphism
+---------------------------------------------------------------------------
+creating a method in eclispe app
+public class AbstarctClass {
+  int method1() {
+	 return 0; 
+  }
+}
+abstract cls wil only have the header
+for eg :
+abstract void buySoap();
+------------------------------------------------------------------------------------------------------------
+Interface:
+*The interface in Java is a mechanism to achieve abstraction.
+*variables in an interface are public, static, and final.
+* we can also create a cls in interface as well as vise versa;
+------------------------------------------------------------------------------------------------------------[
+Encapsulation:
+ wrapping up of data and functionality under a single unit.
+to use encap there is 2 method :
+getter and setter
+eg:
+setEmail() where set is a method ..
+public void setEmail(String email) {
+	  this.email=email; // this is used for access the same properties of the same cls
+  }
+--------------------------------------------------------------------------------------
+setter eg:
+  public void setEmail(String email) {
+	  this.email=email;
+  }
+getter:
+ public String getEmail() {
+	  return email;
+  }
+-------------------------------------------------------------------------------------------------------------
+Inheritance:-
+one class is allowed to inherit the features(fields and methods) of another class.
+keyword :-
+1) extends- combining of  parent and child.
+Types of Inheritance in Java
+*Single Inheritance
+*Multilevel Inheritance
+*Hierarchical Inheritance
+*Multiple Inheritance
+*Hybrid Inheritance
+in both hybrid and multiple inheritance is not used in class
+----------------------------------------------------------------------------------------------------------
+syntax for multilevel :
+class Parent{
+	
+}
+class Child1{
+	
+}
+class GChild extends Child1{
+	
+
+}
+
+public class multilevel {
+	public static void main (String[] args) {
+		
+	}
+}
+----------------------------------------------------------------------------------------------------
+syntax of Single:
+class Parent{
+	
+}
+class Child1 extends Parent{
+	
+}
+
+public classSinglelevel {
+	public static void main (String[] args) {
+		
+	}
+}
+-----------------------------------------------------------------------------------------------
+sample for hierarchical
+class Hparent{
+ void behaviour() {
+	 System.out.println("naugthy");
+ }
+}
+class Hchild1 extends Hparent{
+	void behaviour1() {
+		 System.out.println("cutie");
+	 }
+}
+class Hchild2 extends Hparent{
+	void behaviour3() {
+		 System.out.println("beauty");
+	 }
+}
+class Hchild3 extends Hparent{
+	void behaviour4() {
+		 System.out.println("silent");
+	 }
+}
+public class hierarchical {
+
+	public static void main(String[] args) {
+     		
+    Hparent hp=new Hparent();
+    hp.behaviour();
+	}
+
+}
+----------------------------------------------------------------------------------------------------------
+Polymorphism:
+Poly means many
+morphism means Shapes 
+Method Overriding: A child class can redefine a method of its parent class.
+Method Overloading: We can define multiple methods with the same name but different parameters.
+-------------------------------------------------------------------------------------------------------------
