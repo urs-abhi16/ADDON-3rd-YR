@@ -1,0 +1,120 @@
+Day 5(task) 
+1)handle diviede by zero exception: 
+package exception; 
+
+public class TryCatchClass { 
+        public static void main(String[] args) { 
+        int [] arr = new int[3]; 
+
+        try { 
+                int a= 10/0; 
+
+        } 
+        catch(Exception e) { 
+                System.out.println("Infinity"); 
+                } 
+            int num=10; 
+            int dem = 0; 
+
+       if(dem == 0) 
+       { 
+               System.out.println("divide by zero"); 
+       } 
+       else { 
+               System.out.println("continue!!"); 
+       } 
+} 
+} 
+
+output: 
+  Infinity 
+divide by zero 
+-------------------------------------------------------------------------------------------- 
+2)read from a text file and display the content: 
+package filehandling; 
+
+import java.io.File; 
+import java.io.FileNotFoundException; 
+import java.util.Scanner; 
+
+public class ReadFileClass { 
+    public static void main(String[] args) { 
+        File file = new File("example.txt"); 
+
+        try { 
+            Scanner reader = new Scanner(file); 
+            while (reader.hasNextLine()) { 
+                String line = reader.nextLine(); 
+                System.out.println(line); 
+            } 
+            reader.close(); 
+        } catch (FileNotFoundException e) { 
+            System.out.println("File not found."); 
+        } 
+    } 
+} 
+output: 
+File not found. 
+------------------------------------------------------------------------------------------------- 
+3) writing aa string line by line: 
+package filehandling; 
+
+import java.io.FileWriter; 
+import java.io.IOException; 
+
+public class SimpleWriteFile { 
+    public static void main(String[] args) { 
+        try { 
+            FileWriter writer = new FileWriter("output.txt"); 
+
+            writer.write("Line 1\n"); 
+            writer.write("Line 2\n"); 
+            writer.write("Line 3\n"); 
+
+            writer.close(); 
+            System.out.println("File written successfully."); 
+        } catch (IOException e) { 
+            System.out.println("Error writing to file."); 
+        } 
+    } 
+} 
+output: 
+File written successfully. 
+------------------------------------------------------------------------------------------------------------ 
+Main task: 
+1)read marks file,calculate,write a result file: 
+import java.io.File; 
+import java.io.FileWriter; 
+import java.util.Scanner; 
+
+public class SimpleResult { 
+    public static void main(String[] args) { 
+        try { 
+            Scanner in = new Scanner(new File("marks.txt")); 
+            FileWriter out = new FileWriter("result.txt"); 
+
+            while (in.hasNext()) { 
+                String name = in.next(); 
+                int m1 = in.nextInt(); 
+                int m2 = in.nextInt(); 
+                int m3 = in.nextInt(); 
+
+                int total = m1 + m2 + m3; 
+                int avg = total / 3; 
+
+                out.write(name + " " + total + " " + avg + "\n"); 
+            } 
+
+            in.close(); 
+            out.close(); 
+            System.out.println("Done."); 
+        } catch (Exception e) { 
+            System.out.println("Error"); 
+        } 
+    } 
+} 
+
+output: 
+error 
+
+Displaying
