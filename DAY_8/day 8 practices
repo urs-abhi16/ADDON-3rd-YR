@@ -1,0 +1,148 @@
+SQL:
+SQL stands for Structured Query Language
+SQL lets you access and manipulate databases
+---------------------------------------------------------------
+DataBase:
+Organised collection of related Information.
+Different form of DataBase:
+1) Physical Form eg:-notebook
+2)Digital Form eg:PC stored digital as binary values
+3) Logical Form - data is maintained in a database using a software DBMS.
+DBMS have dis advantages :
+1) DATA REDUNDANCY -Difference Between Redundancy and Replications Data redundancy, in essence, is storing the same data in multiple places. unwanted Storage space.
+2)Data inconsistency means that the same piece of information appears in different formats or with conflicting values across various data sources or systems
+---------------------------------------------------------------------------------------------------
+RDBMS:
+RDBMS, or Relational Database Management System, is a software system that manages relational databases. Tables is the base  obj in database.
+eg:
+*MySql
+*Oracle DataBase
+*Sql Server
+*DB2
+* Postgre SQL
+*SqlLite -used for local storage
+-----------------------------------------------------------------------
+Environments :
+1)CLI -Command Line Interface;
+2) MysQl -work bench;
+3) Other applications.
+------------
+5 Languages in sql:
+* DDL -Data Definition Language : define an obj in a data base;
+        	5 keywords:
+		a)Create
+		b)Alter
+		c)truncate
+		d)rename
+		e)drop
+2) DML: Data MAnipulation Language
+used to manipulate the data
+   3 Keywords:
+	1) INSERT
+	2) UPDATE
+	3)DELETE
+3) TCL: Trascation Control Language
+	ued to control  the transactions
+Keywords:
+	a) commit
+	b)rollback
+	c)savepoint
+4)DCL : Data Control Language
+Used to control the database
+Keywords:
+	a)Grant
+	b)revoke
+5)DQL: Data Query Language
+Keyword 
+	a) Select
+---------------------------------------------
+How to connect :
+mysql  -u root-p
+enter password:
+--------- 
+how to list the database in server
+1) show  
+how to create database:
+syntax :\
+create database name
+\
+-----------------------------------------------------------------------
+syntax for creating a table:
+create table table_name( column_1 datatype(size),coloumn2 datatype(size));
+---------------------------------------------------------------------------------------------------
+int : integer 
+varchar : variable length string
+char: fixed length string
+date: 'yyyy-mm-dd'
+----------------------------------------------------------------------------------------------
+INSERTING TABLES:
+insert into table_name vale(v1,v2,v3,.....);
+eg:
+insert into products values(1,'Abhi','2024-02-02',7777);
+----------------------------------------------------------------------------
+To read records :
+ select * from products;// products is the table_name
+--------------------------------------------------------------------------------
+Null : its is an unknown value; and also it is !=0;
+--------------------------------------------------------------------------
+how to modify the existing value
+update:
+ syntaxx:
+update table_name set columnname='value' where condition
+update products set date_of_purchase='2025-mm-dd' where prodname='mouse';
+--------------------------------------------------------------------------------------------------------
+how to romve records
+delete 
+syntax :
+ delete from table_name where condition.
+eg : delete from
+-----------------------------------------------------------------------------------------------
+ADD COLUMN:
+*using alter keyword
+SYNTAX:
+alter table table_name add column columnname;
+----------------------------------------------------------------------------
+DELETE COLUMN:
+*using drop keyword
+SYNTAX:
+alter table table_name drop column columnname;
+---------------------------------------------------------------------------
+RENAME COLUMN;
+*using rename
+SYNTAX:
+alter table table_name rename column old_name to new_name;
+-----------------------------------------------------------------------------
+INCREASE THE SIZE OR CHANGE THE DATATYPE:
+*using modify
+SYNTAX:
+alter table table_name modify columnname datatype(size);
+----------------------------------------------------------------------------------------------------
+differnece btw delete and truncate 
+-------------------------------------------------------------------------------------------------
+Delete 				|		truncate 
+--------------------------------------------------------------------------------------------------
+* remove one or more records 			  * remove all records 
+*it can be rolled back			* it cant be rolled back
+* it will not release space 			* it will release space
+*table will be removed 			*table wont be removed
+----------------------------------------------------------------------------------------------------
+how to rename a table
+rename table old name to  new name
+------------------------------------------------------------------------------------------------
+how to remove a table:
+drop table tablename
+----------------------------------------------------------------------------------------------------
+diff btw truncate and drop is :
+TRUNCATE removes all the record from the table at once, whereas the DROP command removes the table or databases and as well as the structure
+Syntax:
+truncate table tablename;
+
+------------------------------------------------------------------------------------------------
+ how to list table s:
+show tables;
+----------------------------------------------------------------------------------------------------
+naming rules :
+1) must start with an alphabet 
+2) cannot conatin space 
+3) can contain numbers and special characters (_,$,#)
+4) must be unique
