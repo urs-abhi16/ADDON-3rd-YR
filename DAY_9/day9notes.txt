@@ -1,0 +1,73 @@
+Data Controlling Language (DCL) helps users to retrieve and modify the data stored in the database with some specified queries. Grant and Revoke belong to these types of commands of the Data controlling Language. DCL is a component of SQL commands. 
+
+1. Grant : 
+SQL Grant command is specifically used to provide privileges to database objects for a user. This command also allows users to grant permissions to other users too. 
+Syntax:
+grant privilege_name on object_name
+to {user_name | public | role_name} 
+
+2. Revoke : 
+Revoke command withdraw user privileges on database objects if any granted. It does operations opposite to the Grant command. When a privilege is revoked from a particular user U, then the privileges granted to all other users by user U will be revoked. 
+Syntax :
+revoke privilege_name on object_name
+from {user_name | public | role_name}
+----------------------------------------------------------------------------------------------------
+NoSql databases list:
+MongoDB, Apache Cassandra, Redis, and DynamoDB.
+Eg for  extensions usewd in NoSql :
+* .ibd;
+--------------------------------------------------------------------------------------------------------
+DataBase designing :
+it is a process of creating a detailed data model of a database.
+it involues structuring data logically and efficiently
+--------------------------------------------------------------------------------------------------------
+Key Concept in DBMS 
+1) Requirement Analysis
+2)Conceptul Design (ER diagram);
+3)logical design
+4)Normalisation -used to avoid duplication.
+	1nf,2nf,3nf;
+5) Physical Design.
+--------------------------------------------------------------------------------------------------------
+Main purpose :
+Data integration
+reduce duplication
+increase security 
+scalability
+----------------------------------------------------------------------------------------------------------
+Types of Normalization
+it is a process of organising data in a database
+rules:
+1nf:
+* each column should contaions atomic values.
+* no repeating grps
+2nf:
+*should meet the rquirement of 1nf
+* no patial dependency 
+3nf:
+*should meet the rquirement of 1nf
+* no transitive dependency
+--------------------------------------------------------------------------------------------------------
+Sql clauses :
+where 
+eg:
+select * from table_name where column name =222
+" *"  specifies all!!
+---------------------------------------------------------------------------------------------------------
+to make in order :
+syntax :
+select * from tablename  order by column name desc(order  );
+select * from tablename  order by column name;        
+
+note : It wont change the original.                                                             
+-----------------------------------------------------------------------------------------------------------    
+to set limit :
+syntax :
+select * form tablename limit3;
+----------------------------------------------------------------------------------------------------------
+select * from tablename  limit 2 offset 3;
+this will  leave the 1st 3 elements and then print the next 2 elements.
+-----------------------------------------------------------------------------------------------------------
+distinct:\
+select distinct name from tablename;
+                                  
