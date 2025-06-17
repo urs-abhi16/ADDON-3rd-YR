@@ -232,3 +232,84 @@ mysql> select * from ipl_team;
 3 rows in set (0.00 sec)
 
 mysql> exit;
+--------------------------------------------------------------------------------------------------------------------------------------
+Main program :
+create table slibrary(
+    -> stname varchar(10),
+    -> rollno int,
+    -> dep varchar(50));
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> insert into slibrary('suba',49,'it'),('sanjay',38,'it'),('nik',25,'it');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''suba',49,'it'),('sanjay',38,'it'),('nik',25,'it')' at line 1
+mysql> insert into slibrary values('suba',49,'it'),('sanjay',38,'it'),('nik',25,'it');
+Query OK, 3 rows affected (0.01 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> select * from slibrary;
++--------+--------+------+
+| stname | rollno | dep  |
++--------+--------+------+
+| suba   |     49 | it   |
+| sanjay |     38 | it   |
+| nik    |     25 | it   |
++--------+--------+------+
+3 rows in set (0.00 sec)
+
+mysql> create table blibrary(
+    -> bookid int,
+    -> bookname varchar(50),\
+    -> );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 4
+mysql> create table blibrary(
+    -> bookid int,
+    -> bookname varchar(50),
+    -> booktype varchar(30));
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> insert into blibrary values(102030,'atomic habits','self-help category'),(11244,'War and Peace,'historical fiction'),(342441,'Ulysses','novel');
+    '>
+    '> ;
+    '> );
+    '> insert into blibrary values(102030,'atomic habits','self-help category'),(11244,'War and Peace,'historical fiction'),(342441,'Ulysses','novel');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'historical fiction'),(342441,'Ulysses','novel');
+
+;
+);
+insert into blibrary valu' at line 1
+mysql> insert into blibrary values(102030,'atomic habits','self-help category'),(11244,'War and Peace','historical fiction'),(342441,'Ulysses','novel');
+Query OK, 3 rows affected (0.00 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> select * from blibrary;
++--------+---------------+--------------------+
+| bookid | bookname      | booktype           |
++--------+---------------+--------------------+
+| 102030 | atomic habits | self-help category |
+|  11244 | War and Peace | historical fiction |
+| 342441 | Ulysses       | novel              |
++--------+---------------+--------------------+
+3 rows in set (0.00 sec)
+
+mysql> create table tlibrary(
+    -> bookid int;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 2
+mysql> create table tlibrary(
+    -> bookid int,
+    -> duedate date,
+    -> returndate date);
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> insert into tlibrary values(102030,'2025-06-16','2025-06-26'),(11244,'2025-06-20','2025-06-30'),(342441,'2025-06-06','2025-06-16');
+Query OK, 3 rows affected (0.00 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> select * from tlibrary;
++--------+------------+------------+
+| bookid | duedate    | returndate |
++--------+------------+------------+
+| 102030 | 2025-06-16 | 2025-06-26 |
+|  11244 | 2025-06-20 | 2025-06-30 |
+| 342441 | 2025-06-06 | 2025-06-16 |
++--------+------------+------------+
+3 rows in set (0.00 sec)
