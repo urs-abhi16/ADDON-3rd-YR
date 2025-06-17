@@ -1,114 +1,27 @@
-elseif condition using && operator
-public class Main
-{
-	public static void main(String[] args) {
-	int age=16;
-	if(age>16)
-	{
-	        System.out.println("valid");
-	}
-	else if(age<16)
-	{
-	    System.out.print("invalid");
-	}
-	else
-	{
-	    System.out.println("Age is 16");
-	}
-	}
-}
+import java.util.Scanner;
 
-Output:
-Age is 16
--------------------------
+public class LeapYear {
 
-}
-
-Output:
-Not eligible
-
-Using Switch Case:
-public class Main
-{
-	public static void main(String[] args) {
-	int age=18;
-	String gender="male";
-	if(age<18 || gender=="female")
-	{
-	        System.out.println("Ticket is free");
-	}
-	else
-	{
-	    int km=15;
-	    switch(km){
-	        case :{
-	            System.out.println("Rupees 50");
-	            break;
-	        }
-	        case 10:{
-	            System.out.println("Rupees 100");
-	            break;
-	        }
-	        default:{
-	            System.out.println("Not Applicable");
-	        }
-	}
-	}
-	}
-}
-
-Output:
-Not Applicable
-------------------------------------------------------------
-
-Using do while
-public class Main
-{
-	public static void main(String[] args) {
-	    int i=5;
-	    do
-	    {
-	        System.out.println(i);
-	        i++;
-	    }
-	    while(i<5);
-	}
-}
-
-Output:
-5
-
-------------------------------------------------------
-Methods:
-return type without static
-
-public class Main
-{
-    int myMethod(int a,int b)
-    {
-        return a+b;
+   
+    static void checkLeap(int year) {
+        if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+            System.out.println(year + " is a Leap Year.");
+        } else {
+            System.out.println(year + " is Not a Leap Year.");
+        }
     }
-	public static void main(String[] args) {
-	   Main m=new Main();
-	   System.out.print(m.myMethod(5,10));
-	}
-}
 
-Output:
-15
-----------------------------
-with static
-public class Main
-{
-    static int myMethod(int a,int b)
-    {
-        return a+b;
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter a year: ");
+        int year = input.nextInt();
+
+        checkLeap(year);  
+
+        input.close();
     }
-	public static void main(String[] args) {
-	
-	   System.out.print(myMethod(5,10));
-	}
 }
-
-Output
-15
+output:
+Enter a year: 2020
+2020 is a Leap Year.
