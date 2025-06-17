@@ -1,0 +1,42 @@
+CREATE TABLE Book (
+    book_id INT PRIMARY KEY,
+    title VARCHAR(100),
+    author VARCHAR(50)
+);
+
+CREATE TABLE Member (
+    member_id INT PRIMARY KEY,
+    name VARCHAR(50),
+    type VARCHAR(20)
+);
+
+CREATE TABLE Issue (
+    issue_id INT PRIMARY KEY,
+    member_id INT,
+    book_id INT,
+    issue_date DATE,
+    FOREIGN KEY(member_id) REFERENCES Member(member_id),
+    FOREIGN KEY(book_id) REFERENCES Book(book_id)
+);
+-- Book
+INSERT INTO Book VALUES (101, 'Java Basics', 'James');
+INSERT INTO Book VALUES (102, 'Python Pro', 'Guido');
+INSERT INTO Book VALUES (103, 'DBMS', 'Elmasri');
+
+-- Member
+INSERT INTO Member VALUES (1, 'Abhinav', 'Student');
+INSERT INTO Member VALUES (2, 'Priya', 'Staff');
+INSERT INTO Member VALUES (3, 'Raj', 'Student');
+
+-- Issue
+INSERT INTO Issue VALUES (1, 1, 101, '2025-06-17');
+INSERT INTO Issue VALUES (2, 2, 102, '2025-06-15');
+
+Output:
+Course fee updated.
+Courses:
+C101 | Java | ₹5000
+C102 | Python | ₹6000
+C103 | SQL | ₹3000
+C104 | Web Dev | ₹4500
+C105 | C++ | ₹4000
