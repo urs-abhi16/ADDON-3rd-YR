@@ -1,0 +1,7 @@
+//this is the continuation of task2 where we are updating a new column ;
+
+UPDATE Course SET fee = 6000 WHERE code = 'C102';
+Output:
+
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
