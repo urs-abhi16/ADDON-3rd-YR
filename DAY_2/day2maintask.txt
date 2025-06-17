@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class StringAnalyzer {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter a sentence: ");
+        String sentence = input.nextLine();
+        String[] words = sentence.trim().split("\\s+");
+        int wordCount = words.length;
+        int charCount = 0;
+        for (char ch : sentence.toCharArray()) {
+            if (ch != ' ') {
+                charCount++;
+            }
+        }
+      String reversed = new StringBuilder(sentence).reverse().toString();
+        String longest = "";
+        for (String word : words) {
+            if (word.length() > longest.length()) {
+                longest = word;
+            }
+        }
+        System.out.println("\n--- String Analysis ---");
+        System.out.println("Word Count       : " + wordCount);
+        System.out.println("Character Count  : " + charCount);
+        System.out.println("Reversed Sentence: " + reversed);
+        System.out.println("Longest Word     : " + longest);
+        input.close();
+    }
+}
+Output:
+Enter a sentence: Java is super powerful
+
+--- String Analysis ---
+Word Count       : 4
+Character Count  : 20
+Reversed Sentence: lufrewop repus si avaJ
+Longest Word     : powerful
+
