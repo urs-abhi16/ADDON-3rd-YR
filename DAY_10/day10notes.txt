@@ -1,0 +1,31 @@
+
+Command:
+*use (--) symbol
+==================  
+Functions in Sql: 
+==================
+*aggreigate():
+*performs a calculation on a set of values and returns a single value
+In aggreigate():
+*MIN(column_name)
+*MAX(coulmn_name)
+*COUNT(column_name)
+*SUM(column_name)
+*AVG(column_name)
+
+SYNTAX:
+select function(column_name) from table_name;
+
+select column_name,function(column_name) from table_name;
+
+
+DELETE multiple records in a table:
+EX:
+ delete from student where dept_id in(1001,3035,5005,2002);
+
+SYNTAX:
+ delete from tablename where columnname in(entries);
+
+INSERT column as first:
+SYNTAX:
+alter table student add column reg_no int first;
