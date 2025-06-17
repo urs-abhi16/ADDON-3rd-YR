@@ -1,0 +1,20 @@
+import java.util.*;
+
+public class StudentMarks {
+    public static void main(String[] args) {
+        HashMap<String, Integer> marks = new HashMap<>();
+        marks.put("Abhinav", 85);
+        marks.put("John", 75);
+        marks.put("Priya", 90);
+
+        int total = 0;
+        for (int score : marks.values()) {
+            total += score;
+        }
+
+        double average = (double) total / marks.size();
+        System.out.println("Average Marks: " + average);
+    }
+}
+Output:
+Average Marks: 83.33333333333333
