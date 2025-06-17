@@ -1,0 +1,16 @@
+-- Insert into Student from the table task1
+INSERT INTO Student VALUES (1, 'Abhinav', 'IT');
+INSERT INTO Student VALUES (2, 'Priya', 'CS');
+INSERT INTO Student VALUES (3, 'John', 'ECE');
+INSERT INTO Student VALUES (4, 'Anu', 'IT');
+INSERT INTO Student VALUES (5, 'Raj', 'EEE');
+
+-- Insert into Course
+INSERT INTO Course VALUES ('C101', 'Java', 5000);
+INSERT INTO Course VALUES ('C102', 'Python', 5500);
+INSERT INTO Course VALUES ('C103', 'SQL', 3000);
+INSERT INTO Course VALUES ('C104', 'Web Dev', 4500);
+INSERT INTO Course VALUES ('C105', 'C++', 4000);
+
+output:
+Query OK, 1 row affected (0.01 sec)
