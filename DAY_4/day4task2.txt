@@ -1,0 +1,29 @@
+import java.io.*;
+
+public class ReadFileExample {
+    public static void main(String[] args) {
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader("sample.txt"));
+            String line;
+            System.out.println("File content:");
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
+            }
+            reader.close();
+        } catch (IOException e) {
+            System.out.println("Error reading file: " + e.getMessage());
+        }
+    }
+}
+Output:
+File content:
+Welcome to Java
+File reading is fun!
+End of file.
+--------------------------------
+  File content:
+Welcome to Java
+File reading is fun!
+End of file.
+
+  
