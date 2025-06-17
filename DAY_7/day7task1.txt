@@ -1,0 +1,13 @@
+CREATE TABLE Student (
+    id INT PRIMARY KEY,
+    name VARCHAR(50),
+    department VARCHAR(50)
+);
+
+CREATE TABLE Course (
+    code VARCHAR(10) PRIMARY KEY,
+    name VARCHAR(50),
+    fee INT
+);
+output:
+Query OK, 0 rows affected (0.02 sec)
