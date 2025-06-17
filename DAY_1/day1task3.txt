@@ -1,1 +1,19 @@
+elseif condition using || operator
+public class Main
+{
+	public static void main(String[] args) {
+	int age=18;
+	String gender="female";
+	if(age>16 || gender=="female")
+	{
+	        System.out.println("Ticket is free");
+	}
+	else
+	{
+	    System.out.println("Ticket is not free");
+	}
+	}
+}
 
+Output:
+Ticket is free
