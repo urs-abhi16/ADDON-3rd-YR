@@ -1,0 +1,62 @@
+import java.util.Scanner;
+public class Calculator {
+   static void add(int a, int b) {
+        System.out.println("Result: " + (a + b));
+    }
+    static void subtract(int a, int b) {
+        System.out.println("Result: " + (a - b));
+    }
+    static void multiply(int a, int b) {
+        System.out.println("Result: " + (a * b));
+    }
+    static void divide(int a, int b) {
+        if (b != 0) {
+            System.out.println("Result: " + (a / b));
+        } else {
+            System.out.println("Cannot divide by zero!");
+        }
+    }
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter first number: ");
+        int num1 = input.nextInt();
+        System.out.print("Enter second number: ");
+        int num2 = input.nextInt();
+        System.out.println("\n*** MENU ***");
+        System.out.println("1. Add");
+        System.out.println("2. Subtract");
+        System.out.println("3. Multiply");
+        System.out.println("4. Divide");
+        System.out.print("Choose an option (1-4): ");
+        int choice = input.nextInt();
+        switch (choice) {
+            case 1:
+                add(num1, num2);
+                break;
+            case 2:
+                subtract(num1, num2);
+                break;
+            case 3:
+                multiply(num1, num2);
+                break;
+            case 4:
+                divide(num1, num2);
+                break;
+            default:
+                System.out.println("Invalid choice!");
+        }
+
+        input.close();
+    }
+}
+Output:
+Enter first number: 10
+Enter second number: 5
+
+*** MENU ***
+1. Add
+2. Subtract
+3. Multiply
+4. Divide
+Choose an option (1-4): 3
+Result: 50
