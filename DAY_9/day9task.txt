@@ -19,12 +19,7 @@ mysql> desc student_profile;
 | department  | varchar(10) | YES  |     | NULL    |       |
 +-------------+-------------+------+-----+---------+-------+
 3 rows in set (0.09 sec)
-mysql> insert into student_profile values(1,'sam','informationtechnology'),(2,'ram',computerscience'),(3,'bussinessaccountancy');
-    '> ^C
-mysql> insert into student_profile values(1,'sam','informationtechnology');
-ERROR 1406 (22001): Data too long for column 'department' at row 1
-mysql> insert into student_profile values(1,'sam','it\');
-    '> ^C
+
 mysql>  insert into student_profile values(1,'sam','it');
 Query OK, 1 row affected (0.16 sec)
 
