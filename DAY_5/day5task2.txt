@@ -1,0 +1,21 @@
+import java.util.*;
+
+public class UniqueEmails {
+    public static void main(String[] args) {
+        HashSet<String> emails = new HashSet<>();
+        emails.add("abhinav@gmail.com");
+        emails.add("john@example.com");
+        emails.add("abhinav@gmail.com");  // Duplicate
+        emails.add("john@yahoo.com");
+
+        System.out.println("Unique Emails:");
+        for (String email : emails) {
+            System.out.println(email);
+        }
+    }
+}
+Output :
+Unique Emails:
+john@example.com
+abhinav@gmail.com
+john@yahoo.com
