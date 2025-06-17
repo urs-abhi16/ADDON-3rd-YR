@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class SplitWords {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter a sentence: ");
+        String sentence = input.nextLine();
+        String[] words = sentence.split(" ");
+        System.out.println("The words are:");
+        for (String word : words) {
+            System.out.println(word);
+        }
+        input.close();
+    }
+}
+Output:
+Enter a sentence: Java is super easy
+The words are:
+Java
+is
+super
+easy
