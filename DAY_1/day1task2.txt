@@ -1,0 +1,19 @@
+public class Main
+{
+	public static void main(String[] args) {
+	int age=19;
+	String gender="female";
+	if(age>=21 && gender=="female")
+	{
+	        System.out.println("Eligible for female");
+	}
+	else if(age>=23 && gender=="male")
+	{
+	    System.out.print("Eligible for male");
+	}
+	else
+	{
+	    System.out.println("Not eligible");
+	}
+	}
+}
