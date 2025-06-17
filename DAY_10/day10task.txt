@@ -306,7 +306,7 @@ MariaDB [task]> select course_name,avg(salary) from student group by  course_nam
 | BSC IT      |  43430.0000 |
 +-------------+-------------+
 3 rows in set (0.000 sec)
-
+//min and max
 MariaDB [task]> select course_name,max(salary) from student group by  course_name;
 +-------------+-------------+
 | course_name | max(salary) |
