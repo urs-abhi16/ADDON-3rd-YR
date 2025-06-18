@@ -1,0 +1,78 @@
+ER DIAGRAM:
+*Virtual represention of data that shows the entities,attributes and relationship between them
+*used during conceptual database designing(to understand the organise of data before creating the sql table)
+ 
+Basic components:
+*Entity
+*Attribute
+*Primary Key
+*Foreign Key
+
+
+-------------------------------------------------------------------------------------
+SYMBOLS REPRESENTATION
+-------------------------------------------------------------------------------------
+*   Rectangle(diagram) *entity
+*   Eclipse (diagram) *attribute
+*   Double Rectangle (diagram) *weak entity
+*   Diamond-horizontal (diagram) *relationship type
+*  Double Diamond(diagram) *identifying relationships for weak entity
+* Oval-inside line(diagarm) *key attribute
+* Double Oval-one inside another(diagram) *multivalued attribute
+* Oval links to rectangle and rect links to                       *link
+another oval
+* Oval-inside dotted line *partial key attribute
+------------------------------------------------------------------------------------------------
+*ENTITY:
+  *represents table name
+  *it have attribute inside
+
+ATTRIBUTES:
+  *represents column name
+   *attributes have primary keys
+
+PRIMARY KEY:
+  *unique records
+  *don't
+
+WEAK ENTITY:
+  *it depends on entity table
+
+CARDINALITY:
+  *shows the number of instances
+  *one entity can have in relation to another
+  1:1-one entity to another
+ 1:n-one to many
+ m:n-many to many
+
+PRIMARY KEY:
+  *unique number
+  *don't contain null values & duplications
+
+FOREIGN KEY:
+
+NotNUll-does'nt allow null values
+
+on delete:if we delete the values in primary key in  one table,it deletes the values stored in foreign key
+on set: after deleting the values,but gives the null fields instead of removing the space
+
+Unique & notnull:
+*act as a primary key,but not a primary key
+
+AUTOINCREMENT:
+
+SYNTAX:
+create table tablename( columnname datatype auto_increment primarykey)
+
+*it increments automatically
+
+JOINTS:
+*used to combine rows from two or more tables based on related columns(primary key & foreign key)
+
+TYPES:
+*innerjoint-matching rows from both tables
+*outerjoint
+*letftouterjoint-all matches rows from the left + only matches from right
+*rightouterjoint-  all matches rows from right  + only matches from left
+*fullouterjoint-all rows from both sides
+*crossjoint-all the combinations 
