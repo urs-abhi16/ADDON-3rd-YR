@@ -57,20 +57,43 @@ public class StudentDBManager {
                     }
 
                 } else if (choice == 3) {
-                    System.out.println("👋 Exiting...");
+                    System.out.println(" Exiting...");
                     break;
                 } else {
-                    System.out.println("❌ Invalid choice. Try again.");
+                    System.out.println(" Invalid choice. Try again.");
                 }
             }
         } catch (Exception e) {
-            System.out.println("❌ Error: " + e.getMessage());
+            System.out.println("Error: " + e.getMessage());
         } finally {
             try {
                 if (conn != null) conn.close();
             } catch (SQLException se) {
-                System.out.println("❌ Error closing connection.");
+                System.out.println(" Error closing connection.");
             }
         }
     }
 }
+Output:
+ Connected to MySQL Database.
+
+--- Student DB Menu ---
+1. Insert Student
+2. Display Students
+3. Exit
+Enter your choice: 1
+Enter ID: 101
+Enter Name: Abhinav
+Enter Department: IT
+Enter Marks: 88.5
+ 1 student inserted successfully!
+
+--- Student DB Menu ---
+1. Insert Student
+2. Display Students
+3. Exit
+Enter your choice: 2
+
+ID	Name		Department	Marks
+---------------------------------------------
+101	Abhinav   	IT        	88.50
